@@ -73,7 +73,7 @@ const isValidURL = input => {
             var issues = v.nodes.length;
             issueCount += issues;
 
-            // Record the largest issue count for outpuit formating later
+            // Record the largest issue count for output formatting later
             if (issues > HelpTextWithCountLargest) {
                 HelpTextWithCountLargest = issues;
             }
@@ -102,8 +102,9 @@ const isValidURL = input => {
         // Start CLI output
 
         console.log("");
-    
-        if (issueCount > 0) {
+        
+        // Scan FAILS if there is more than 1 issue.
+        if (issueCount > 1) {
             console.log(" Scan Result: FAIL");
         } else {
             console.log(" Scan Result: PASS");

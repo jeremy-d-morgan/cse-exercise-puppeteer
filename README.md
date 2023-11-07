@@ -14,11 +14,30 @@ This will scan a single page for WCAG 2.1 AA violations (and below) and output t
 - Run `npm install`
 - Run `node axe-puppeteer.js https://dequeuniversity.com/demo/mars`
 
-## Example output of PASS
+## Example output of PASS with 0 issues
 ```
 cse-exercise-puppeteer % node axe-puppeteer.js https://dequeuniversity.com/demo/mars
 
  Scan Result: PASS
+
+```
+
+## Example output of PASS with 1 issue
+```
+cse-exercise-puppeteer % node axe-puppeteer.js https://dequeuniversity.com/demo/mars
+
+ Scan Result: PASS
+
+Total Issues: 1
+
+       Minor: 0
+    Moderate: 0
+     Serious: 1
+    Critical: 0
+
+# | Description
+--------------------------------
+1 | <html> element must have a lang attribute
 
 ```
 
